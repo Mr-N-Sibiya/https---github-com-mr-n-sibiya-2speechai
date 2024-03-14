@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from PyPDF2 import PdfReader
+from PyPDF4 import PdfReader
 
 LOGGER = get_logger(__name__)
 
