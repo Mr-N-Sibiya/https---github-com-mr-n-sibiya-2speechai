@@ -1,18 +1,20 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from PyPDF4 import PdfReader
+import pdfplumber
 
 LOGGER = get_logger(__name__)
 
 def read_pdf(file):
     text = ""
-    print("this is inside the function")
-    pdf_reader = PdfReader(file)
-    for page_num in range(len(pdf_reader.pages)):
-        page = pdf_reader.pages[page_num]
-        text += page.extract_text()
-        print("this is inside the for loop")
+    # Open the PDF file
+    with pdfplumber.open(file) as pdf:
+        # Iterate through each page
+        for page in pdf.pages:
+            # Extract text from the page
+            text = page.extract_text()
+            print(text)
     return text
+
 
 def split_text_into_words(text):
     words = text.split()
