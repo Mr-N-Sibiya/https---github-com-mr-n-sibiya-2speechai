@@ -1,7 +1,6 @@
-# Welcome to streamlit
+This is a text to speech AI model,
+-takes text written on the console
+-takes pdf uploaded on the console.
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+Since it a proof of concept please use single page pdf, with few words: the servers used are free and has limited...
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
-
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
